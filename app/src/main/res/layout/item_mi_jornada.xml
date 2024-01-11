@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+    android:id="@+id/cardJornUser"
+    android:layout_margin="0.1dp"
+    android:elevation="4dp"
+    android:radius="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="15dp">
+
+        <TextView
+            android:id="@+id/fechaJornada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idJornada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/fechaJornada"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginEnd="0dp"
+            android:text="ID Jornada"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/inicioJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Inicio: "
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_below="@id/fechaJornada" />
+
+        <TextView
+            android:id="@+id/horaInicioJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/inicioJ"
+            android:layout_alignBaseline="@+id/inicioJ"
+            android:hint="hh:mm:ss"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_below="@id/fechaJornada" />
+
+        <TextView
+            android:id="@+id/UbiIncioJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/horaInicioJ"
+            android:layout_marginStart="15dp"
+            android:layout_alignBaseline="@+id/inicioJ"
+            android:hint="ubicacion Inicio"
+            android:textColor="#3F51B5"
+            android:textSize="13sp"
+            android:layout_below="@id/fechaJornada" />
+
+        <TextView
+            android:id="@+id/finJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Fin: "
+            android:textColor="@color/black"
+            android:layout_alignStart="@+id/inicioJ"
+            android:layout_alignEnd="@id/inicioJ"
+            android:textSize="13sp"
+            android:layout_below="@id/inicioJ" />
+
+        <TextView
+            android:id="@+id/horaFinJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/finJ"
+            android:layout_alignBaseline="@+id/finJ"
+            android:hint="hh:mm:ss"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_below="@id/inicioJ" />
+
+        <TextView
+            android:id="@+id/UbiFinJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/horaFinJ"
+            android:layout_alignBaseline="@+id/finJ"
+            android:layout_marginStart="15dp"
+            android:hint="ubicacion Fin"
+            android:textColor="#3F51B5"
+            android:textSize="13sp"
+            android:layout_below="@id/inicioJ" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+

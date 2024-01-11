@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@color/white"
+    tools:context=".secciones.panel.mensajeria.MensajeEntrada">
+
+    <!-- Título del mensaje (Asunto) -->
+    <TextView
+        android:id="@+id/textViewAsunto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Asunto del mensaje"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Datos del remitente -->
+    <TextView
+        android:id="@+id/textViewRemitente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAsunto"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:text="Remitente: Nombre del remitente"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Fecha y hora del mensaje -->
+    <TextView
+        android:id="@+id/textViewFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRemitente"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:text="Fecha: 01 de Enero de 2023"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textViewHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFecha"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:text="Hora: 22:00:00"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <!-- Contenido del mensaje -->
+    <TextView
+        android:background="@color/gris"
+        android:id="@+id/textViewContenido"
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="wrap_content"
+        android:text="Contenido del mensaje..."
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/textViewHora"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="20dp" />
+
+    <!-- Botón de Responder -->
+    <Button
+        android:id="@+id/buttonResponder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Responder"
+        android:textColor="@color/white"
+        android:backgroundTint="#3F51B5"
+        android:layout_below="@id/textViewContenido"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

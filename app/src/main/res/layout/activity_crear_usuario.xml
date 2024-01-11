@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    tools:context=".secciones.panel.usuarios.CrearUsuario">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!-- Titulo -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="Crear Usuario"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Nombre -->
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:hint="Nombres"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:maxLength="30"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <!-- Apellido Paterno -->
+    <EditText
+        android:id="@+id/editTextApellidoPaterno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:imeOptions="actionNext"
+        android:hint="Apellido Paterno"
+        android:inputType="textPersonName"
+        android:maxLength="15"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombre" />
+
+    <!-- Apellido Materno -->
+    <EditText
+        android:id="@+id/editTextApellidoMaterno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Apellido Materno"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:imeOptions="actionNext"
+        android:maxLength="15"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextApellidoPaterno" />
+
+    <!-- ID Usuario -->
+    <EditText
+        android:id="@+id/editTextIdUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:hint="ID de Usuario"
+        android:inputType="text"
+        android:maxLength="6"
+        android:minHeight="48dp"
+
+        android:imeOptions="actionNext"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextApellidoPaterno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextApellidoPaterno" />
+
+    <!-- Contraseña -->
+    <EditText
+        android:id="@+id/editTextContrasena"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:maxLength="8"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:imeOptions="actionNext"
+        app:layout_constraintStart_toStartOf="@+id/editTextApellidoMaterno"
+        app:layout_constraintTop_toBottomOf="@+id/editTextApellidoMaterno"
+        app:layout_constraintTop_toTopOf="@+id/editTextIdUsuario" />
+
+    <!-- Especialidad -->
+    <EditText
+        android:id="@+id/editTextEspecialidad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Profesion"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:maxLength="30"
+        android:minHeight="48dp"
+        android:imeOptions="actionNext"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContrasena" />
+
+    <!-- Cargo -->
+    <EditText
+        android:id="@+id/editTextCargo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:imeOptions="actionNext"
+        android:hint="Cargo"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:maxLength="30"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEspecialidad" />
+
+    <!-- Fecha de Nacimiento -->
+    <TextView
+        android:id="@+id/editTextFechaNacimiento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:hint="Fecha Nacimiento (Click para seleccionar Fecha)"
+        android:minHeight="48dp"
+        android:paddingVertical="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCargo"  />
+
+    <!-- Correo Electrónico -->
+    <EditText
+        android:id="@+id/editTextCorreoElectronico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
+        android:textSize="14sp"
+        android:maxLength="50"
+        android:minHeight="48dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:imeOptions="actionDone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFechaNacimiento" />
+    <!-- Rol (Spinner) -->
+    <Spinner
+        android:id="@+id/spinnerRol"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:imeOptions="actionNext"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCorreoElectronico" />
+
+    <!-- Sexo -->
+    <RadioGroup
+        android:id="@+id/radioGroupSexo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:orientation="horizontal"
+        android:textSize="14sp"
+        android:gravity="center_horizontal"
+        android:imeOptions="actionNext"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="Masculino"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+    </RadioGroup>
+
+    <!-- Botón para Crear Usuario -->
+    <Button
+        android:id="@+id/buttonCrearUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Usuario"
+        android:backgroundTint="@color/narajanda_h"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSexo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

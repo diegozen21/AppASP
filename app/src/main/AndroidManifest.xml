@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AspApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".secciones.panel.inventario.AgregarMaterial"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.inventario.Inventario"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.cuenta.perfil.MisHoras"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.proyectos.DatosProyecto"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.cuenta.perfil.MisJornadas"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.cuenta.perfil.DatosPerfil"
+            android:exported="false"
+            android:label="@string/title_activity_datos_perfil"
+            android:theme="@style/Theme.AspApp" />
+        <activity
+            android:name=".secciones.cuenta.perfil.EditarUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.usuarios.DatosUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".login.VerificarCodigo"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.tareas.DetalleTarea"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.tareas.CrearTarea"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.tareas.Tareas"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.mensajeria.MensajeSalida"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.mensajeria.MensajeEntrada"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.proyectos.CrearProyecto"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.mensajeria.MensajeNuevo"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.usuarios.JornadasUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.usuarios.CrearUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.usuarios.Usuarios"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.documentos.Documentos"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.proyectos.Proyectos"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.mensajeria.Mensajeria"
+            android:exported="false" />
+        <activity
+            android:name=".inicio.PantallaPrincipal"
+            android:exported="false" />
+        <activity
+            android:name=".login.CambiarPassword"
+            android:exported="false" />
+        <activity
+            android:name=".login.InicioSesion"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

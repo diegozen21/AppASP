@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="40dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código Material" />
+
+    <EditText
+        android:id="@+id/editTextCodigoMaterial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="Ingrese el código del material"
+        android:textColorHint="#C3C3C3"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Descripción Material" />
+
+    <EditText
+        android:id="@+id/editTextDescripcionMaterial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#C3C3C3"
+        android:textColor="@color/black"
+        android:hint="Ingrese la descripción del material"
+        android:inputType="text" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Numero de Serie Material" />
+
+    <EditText
+        android:id="@+id/editTextSerieMaterial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#C3C3C3"
+        android:textColor="@color/black"
+        android:hint="Ingrese la numero serie del material"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="ID Subnivel" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/editTextIdSubnivel"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:hint="Ingrese el ID del subnivel"
+            android:inputType="text"
+            android:textColor="@color/black" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gris"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Puedes agregar más elementos según tus necesidades -->
+
+    <Button
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Guardar"
+        android:onClick="guardarDatos" />
+
+</LinearLayout>

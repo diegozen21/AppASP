@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gris">#F5F5F5</color>
+    <color name="anaranjado">#FF9800</color>
+    <color name="verde">#CDDC39</color>
+    <color name="narajanda_h">#E64A19</color>
+    <color name="red_text">#FF1100</color>
+
+</resources>

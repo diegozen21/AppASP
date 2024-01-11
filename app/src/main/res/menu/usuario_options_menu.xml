@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_ver_datos"
+        android:title="Ver Datos" />
+    <item
+        android:id="@+id/menu_ver_jornada"
+        android:title="Ver Jornada" />
+</menu>

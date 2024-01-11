@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".secciones.panel.usuarios.DatosUsuario">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <!-- Titulo -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="Datos"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ImageView para la foto del usuario -->
+    <ImageView
+        android:id="@+id/imageViewUsuario"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/account"
+        app:layout_constraintTop_toBottomOf="@id/titulo"/>
+
+    <TextView
+        android:id="@+id/textViewEstadoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado: "
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUsuario"
+        />
+
+    <TextView
+        android:id="@+id/textViewEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Habilitado/Inhabilitado"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewEstadoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewEstadoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewIDLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID del Usuario: "
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEstadoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="123456"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewIDLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewIDLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewNombreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombres: "
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIDLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Nombres"
+        app:layout_constraintTop_toTopOf="@+id/textViewNombreLabel"
+        app:layout_constraintBottom_toBottomOf="@id/textViewNombreLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewNombreLabel"
+        />
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nombres"
+        android:visibility="gone"
+        android:maxLength="30"
+        android:imeOptions="actionNext"
+        android:textSize="18sp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/textViewNombreLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewNombreLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewNombreLabel" />
+
+    <TextView
+        android:id="@+id/textViewApellidoPaternoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Apellido Paterno: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombreLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewApellidoPaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ApellidoPaterno"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewApellidoPaternoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewApellidoPaternoLabel"
+        />
+
+    <EditText
+        android:id="@+id/editTextApellidoPaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Apellido Paterno"
+        android:visibility="gone"
+        android:imeOptions="actionNext"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewApellidoPaternoLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewApellidoPaternoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewApellidoPaternoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewApellidoMaternoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Apellido Materno: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewApellidoPaternoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewApellidoMaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ApellidoMaterno"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewApellidoMaternoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewApellidoMaternoLabel"
+        />
+
+    <EditText
+        android:id="@+id/editTextApellidoMaterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Apellido Materno"
+        android:maxLength="15"
+        android:visibility="gone"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewApellidoMaternoLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewApellidoMaternoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewApellidoMaternoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewSexoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Sexo: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewApellidoMaternoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Masculino"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewSexoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewSexoLabel"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Masculino/Femenino"
+        android:visibility="gone"
+        android:imeOptions="actionNext"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewSexoLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewSexoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewSexoLabel"
+        android:entries="@array/roles"
+        />
+
+    <TextView
+        android:id="@+id/textViewFechaNacimientoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Fecha de Nacimiento: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSexoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewFechaNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="01/01/1990"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewFechaNacimientoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewFechaNacimientoLabel"
+        />
+
+    <EditText
+        android:id="@+id/editTextFechaNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="dd/mm/aaaa"
+        android:imeOptions="actionNext"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/textViewFechaNacimientoLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewFechaNacimientoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewFechaNacimientoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewProfesionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Profesión: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFechaNacimientoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewProfesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ingeniero"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewProfesionLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewProfesionLabel"
+        />
+
+    <EditText
+        android:id="@+id/editTextProfesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="30"
+        android:hint="Profesion"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/textViewProfesionLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewProfesionLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewProfesionLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewCargoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Cargo: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProfesionLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewCargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Gerente"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewCargoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewCargoLabel"
+        />
+
+    <EditText
+        android:id="@+id/editTextCargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Cargo"
+        android:visibility="gone"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewCargoLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewCargoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewCargoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewRolLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Rol de Usuario: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCargoLabel"
+        />
+
+    <TextView
+        android:id="@+id/textViewRol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Administrador"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewRolLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewRolLabel"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerRolUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        android:hint="Administrador/Usuario"
+        android:visibility="gone"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewRolLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewRolLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewRolLabel"
+        android:entries="@array/roles"
+        />
+
+    <TextView
+        android:id="@+id/textViewCorreoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Correo: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRolLabel"
+    />
+
+    <TextView
+        android:id="@+id/textViewCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="correo@example.com"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/textViewCorreoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewCorreoLabel"
+        />
+
+    <EditText
+        android:id="@+id/editTextCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="example@aspcontrol.com.pe"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:maxLength="50"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/textViewCorreoLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewCorreoLabel"
+        app:layout_constraintStart_toEndOf="@+id/textViewCorreoLabel"
+        />
+
+    <Button
+        android:id="@+id/buttonEditar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Editar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCorreoLabel"
+        app:layout_constraintEnd_toStartOf="@+id/buttonHabilitarInhabilitar"
+    />
+
+    <Button
+        android:id="@+id/buttonHabilitarInhabilitar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Inhabilitar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCorreoLabel"
+        app:layout_constraintStart_toEndOf="@+id/buttonEditar"
+    />
+
+    <Button
+        android:id="@+id/buttonCancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Cancelar"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEditar"
+    />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
